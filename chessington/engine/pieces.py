@@ -43,16 +43,24 @@ class Pawn(Piece):
         cur_col=cur_square.col
 
         move_direction = 1 if self.player == Player.WHITE else -1
-        sq = Square.at(cur_row + move_direction, cur_col)
-        available_moves.append(sq)
+        sq1 = Square.at(cur_row + move_direction, cur_col)
         if self.starting_pos:
-
-# 2 spaces on firstmove
-            sq = Square.at(cur_row + (2*move_direction), cur_col )
-            available_moves.append(sq)
-
+            sq2 = Square.at(cur_row + (2*move_direction), cur_col )
+            if  board.square_empty(sq2):
+                available_moves.append(sq2)
+        if  board.square_empty(sq1):
+            available_moves.append(sq1)
+        
         return available_moves
 
+#        move_direction = 1 if self.player == Player.WHITE else -1
+#        sq = Square.at(cur_row + move_direction, cur_col)
+#        available_moves.append(sq)
+# 2 spaces on firstmove
+#        if self.starting_pos:
+#            sq = Square.at(cur_row + (2*move_direction), cur_col )
+#            available_moves.append(sq)
+#        return available_moves
 
 class Knight(Piece):
     """
