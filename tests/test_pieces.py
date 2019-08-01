@@ -33,6 +33,7 @@ class TestPawns:
 
         # Assert
         assert Square.at(5, 4) in moves
+<<<<<<< HEAD
 
     @staticmethod
     def test_white_pawn_can_move_up_two_squares_if_not_moved():
@@ -99,3 +100,5 @@ class TestPawns:
 
         # Assert
         assert Square.at(3, 4) not in moves
+=======
+>>>>>>> 04396d7... Added a test that pawns can move one square
