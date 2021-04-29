@@ -98,8 +98,4 @@ class TestPawns:
         moves = pawn.get_available_moves(board)
 
         # Assert
-<<<<<<< HEAD
         assert Square.at(3, 4) not in moves
-=======
-        assert Square.at(3, 4) not in moves
->>>>>>> d4df8a9... Added a test that pawns can move two squares
