@@ -44,12 +44,12 @@ class Pawn(Piece):
 
         move_direction = 1 if self.player == Player.WHITE else -1
         sq1 = Square.at(cur_row + move_direction, cur_col)
-        if self.starting_pos:
-            sq2 = Square.at(cur_row + (2*move_direction), cur_col )
-            if  board.square_empty(sq2):
-                available_moves.append(sq2)
         if  board.square_empty(sq1):
             available_moves.append(sq1)
+            if self.starting_pos:
+                sq2 = Square.at(cur_row + (2*move_direction), cur_col )
+                if  board.square_empty(sq2):
+                    available_moves.append(sq2)
         
         return available_moves
 
