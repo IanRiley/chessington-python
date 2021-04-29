@@ -53,15 +53,6 @@ class Pawn(Piece):
         
         return available_moves
 
-#        move_direction = 1 if self.player == Player.WHITE else -1
-#        sq = Square.at(cur_row + move_direction, cur_col)
-#        available_moves.append(sq)
-# 2 spaces on firstmove
-#        if self.starting_pos:
-#            sq = Square.at(cur_row + (2*move_direction), cur_col )
-#            available_moves.append(sq)
-#        return available_moves
-
 class Knight(Piece):
     """
     A class representing a chess knight.
